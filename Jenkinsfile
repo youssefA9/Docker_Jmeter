@@ -1,8 +1,8 @@
-pipeline {
+ pipeline {
 
-    stages {
-        stage('Clone repo') {
-            steps {
+		stages {
+			stage('Clone repo') {
+				steps {
                 git branch: 'main', credentialsId: 'CI_bitbucket_with_password', url: 'https://github.com/AhmedShanwany/Docker_Jmeter.git'
                 sh label: 'pipeline installation', script: """
                 """
@@ -16,7 +16,7 @@ pipeline {
             }
         }
       
-        stage ('Run Blitz Docker') {
+        stage ('Run Jmeter Docker') {
             steps {
                 sh label: 'run docker for jemter', script: """
                 docker run -t -v D:\QIQ\courses\Run_From_CMD:/data jmeter-docker
@@ -24,6 +24,5 @@ pipeline {
             }
         }
 		
+		}
 	}
-}
-
