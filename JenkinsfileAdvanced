@@ -29,7 +29,7 @@
 		}
 		post {
         always {
-            archiveArtifacts '/data/*.csv'
+            archiveArtifacts '*.csv'
         }
     }
 	}
