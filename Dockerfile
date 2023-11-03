@@ -18,4 +18,4 @@ RUN chmod 777 /test/entrypoint.sh
 RUN dos2unix /test/entrypoint.sh
 #define entry point to start this shell once Docker run command is triggered
 ENTRYPOINT ["/bin/sh","./entrypoint.sh"]
-#ENTRYPOINT ["./entrypoint.sh"]
+#ENTRYPOINT ["./entrypointAdvanced.sh"]
