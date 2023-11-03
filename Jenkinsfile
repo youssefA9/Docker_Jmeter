@@ -1,8 +1,7 @@
  pipeline {
-	agent {
-        label 'controller'
-		}
 
+     agent any
+		
 		stages {
 			stage('Clone repo') {
 				steps {
