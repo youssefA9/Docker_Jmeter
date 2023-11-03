@@ -20,17 +20,12 @@
         stage ('Run Jmeter Docker') {
             steps {
 				script{
-                //bat 'docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter-docker opensource-orangehrmlive.jmx' 
-                bat 'docker run -t -v ${workspace}:/data jmeter-docker opensource-orangehrmlive.jmx' 
-
+                bat 'docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter-docker opensource-orangehrmlive.jmx' 
+                
 				}
 			}
         }
 		
 		}
-		post {
-        always {
-            archiveArtifacts 'D:\\QIQ\\courses\\Run_From_CMD\\*.csv'
-        }
-    }
+	
 	}
