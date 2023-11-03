@@ -4,14 +4,13 @@
 			stage('Clone repo') {
 				steps {
                 git branch: 'main', credentialsId: 'CI_bitbucket_with_password', url: 'https://github.com/AhmedShanwany/Docker_Jmeter.git'
-                sh label: 'pipeline installation', script: """
-                """
             }
         }
         stage ('Build test Docker') {
             steps {
                 script {
-				docker build -t jmeter-docker ./
+				bat 'docker build -t jmeter-docker ./'
+				
                      }
             }
         }
@@ -19,9 +18,8 @@
         stage ('Run Jmeter Docker') {
             steps {
 				script{
-                sh label: 'run docker for jemter', script: """
-                docker run -t -v D:\QIQ\courses\Run_From_CMD:/data jmeter-docker
-                """
+                bat 'docker run -t -v D:\QIQ\courses\Run_From_CMD:/data jmeter-docker'
+                
 				}
 			}
         }
