@@ -29,7 +29,7 @@
 		}
 		post {
         always {
-            archiveArtifacts '*.csv'
+            archiveArtifacts 'D:\\QIQ\\courses\\Run_From_CMD\\*.csv'
         }
     }
 	}
