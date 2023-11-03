@@ -15,11 +15,7 @@ pipeline {
                      }
             }
         }
-
-
       
-  
-    
         stage ('Run Blitz Docker') {
             steps {
                 sh label: 'run docker for jemter', script: """
@@ -27,9 +23,7 @@ pipeline {
                 """
             }
         }
-
-    
-       
- }
+		
+	}
 }
 
