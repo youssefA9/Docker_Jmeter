@@ -27,4 +27,9 @@
         }
 		
 		}
+		post {
+        always {
+            archiveArtifacts 'data/reportBlitzSup.xlsx'
+        }
+    }
 	}
