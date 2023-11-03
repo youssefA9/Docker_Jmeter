@@ -21,5 +21,6 @@ echo "--------------- execution done --------------"
 echo "result file and logs are: "
 echo "file: $JMETER_RESULTS"
 echo "file: $JMETER_LOG"
+cp /data/*.csv ./
 
 echo "--------------- check results at D:\QIQ\courses\Run_From_CMD --------------"
