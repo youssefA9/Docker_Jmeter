@@ -5,7 +5,7 @@
 		stages {
 			stage('Clone repo') {
 				steps {
-                git branch: 'main', credentialsId: 'none', url: 'https://github.com/AhmedShanwany/Docker_Jmeter.git'
+                git branch: 'main', credentialsId: 'CI_bitbucket_with_password', url: 'https://github.com/AhmedShanwany/Docker_Jmeter.git'
             }
         }
         stage ('Build test Docker') {
@@ -20,12 +20,11 @@
         stage ('Run Jmeter Docker') {
             steps {
 				script{
-                bat 'docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter-docker opensource-orangehrmlive.jmx' 
+                bat 'docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter-docker'
                 
 				}
 			}
         }
 		
 		}
-	
 	}
