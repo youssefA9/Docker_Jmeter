@@ -13,9 +13,8 @@ RUN wget https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-casutg/2.10/jmeter
 ENV PATH=${PATH}:/test/apache-jmeter-5.6.2/bin/
 COPY . ./
 #linux related to make file executable and any use can execute
-RUN chmod u+x /test/entrypointAdvanced.sh
-RUN chmod 777 /test/entrypointAdvanced.sh
-RUN dos2unix /test/entrypointAdvanced.sh
+RUN chmod u+x /test/entrypoint.sh
+RUN chmod 777 /test/entrypoint.sh
+RUN dos2unix /test/entrypoint.sh
 #define entry point to start this shell once Docker run command is triggered
-ENTRYPOINT ["/bin/sh","./entrypointAdvanced.sh"]
-#ENTRYPOINT ["./entrypointAdvanced.sh"]
+ENTRYPOINT ["/bin/sh","./entrypoint.sh"]
