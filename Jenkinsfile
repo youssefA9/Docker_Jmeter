@@ -20,7 +20,7 @@
         stage ('Run Jmeter Docker') {
             steps {
 				script{
-                bat 'docker run task4 -v c:\ProgramData\Jenkins\.jenkins\workspace\results:/data'
+                bat 'docker run -v c:\ProgramData\Jenkins\.jenkins\workspace\results:/data task4'
                 
 				}
 			}
