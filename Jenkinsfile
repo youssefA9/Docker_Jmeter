@@ -5,7 +5,7 @@
 		stages {
 			stage('Clone repo') {
 				steps {
-                git branch: 'main', credentialsId: 'none', url: 'https://https://github.com/youssefA9/Docker_Jmeter.git'
+                git branch: 'main', credentialsId: 'none', url: 'https://github.com/youssefA9/Docker_Jmeter.git'
             }
         }
         stage ('Build test Docker') {
