@@ -5,13 +5,13 @@
 		stages {
 			stage('Clone repo') {
 				steps {
-                git branch: 'main', credentialsId: 'CI_bitbucket_with_password', url: 'https://https://github.com/youssefA9/Docker_Jmeter.git'
+                git branch: 'main', credentialsId: 'none', url: 'https://https://github.com/youssefA9/Docker_Jmeter.git'
             }
         }
         stage ('Build test Docker') {
             steps {
                 script {
-				bat 'docker build -t jmeter-docker ./'
+				bat 'docker build -t task4 .'
 				
                      }
             }
@@ -20,7 +20,7 @@
         stage ('Run Jmeter Docker') {
             steps {
 				script{
-                bat 'docker run -t -v D:\\QIQ\\courses\\Run_From_CMD:/data jmeter-docker'
+                bat 'docker run task4 -v c:\ProgramData\Jenkins\.jenkins\workspace\results:/data'
                 
 				}
 			}
